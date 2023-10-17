@@ -1,0 +1,13 @@
+import { Router } from 'express';
+import teamRouter from './teams.routes';
+import loginRouter from './login.routes';
+import matchesRouter from './matches.routes';
+import leaderboardRouter from './leaderboard.routes';
+
+const router = Router();
+// rotas
+router.use('/teams', teamRouter);
+router.use('/login', loginRouter);
+router.use('/matches', matchesRouter);
+router.use('/leaderboard', leaderboardRouter);
+export default router;
